@@ -24,6 +24,9 @@ protected:
 public:
 	UFUNCTION(BlueprintPure)
 	bool IsDead() const;
+	
+	void Shoot();
+
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -36,7 +39,6 @@ public:
 private:
 	void MoveForward(float AxisValue);
 	void MoveRight(float AxisValue);
-	void Shoot();
 
 	UPROPERTY(EditAnywhere)
 	float RotationRate = 10;
