@@ -25,8 +25,17 @@ private:
 	TSubclassOf<class UUserWidget> WinScreenClass;
 
 	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> HUDClass;
+
+	UPROPERTY(EditAnywhere)
 	float RestartDelay = 5;
 
 	FTimerHandle RestartTimer;
 
+	UPROPERTY()
+	UUserWidget *HUD;
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 };
